@@ -11,9 +11,9 @@ def cpuMove(board, posWins):
     y = checkHumanMoves(board,posWins, "O")
     
     if checkHumanMoves(board,posWins) != False:
-        valid = checkMove(board, x)
+        valid = checkMove(board, x[2])
         if valid == "success":
-            return x
+            return x[2]
         
     elif y != False:
         valid = checkMove(board, i)
@@ -37,18 +37,7 @@ def checkHumanMoves(board, posWins, player = "X"):
             count += 1
         if board[moveSet[2]] == player:
             count += 1
-            
-        if count > 1: 
-            x = moveSet
-            break
-    if x != None :  
-        if x[0] != player:
-            return x[0]
-        if x[1] != player:
-            return x[1]
-        else:
-            return x[2]
-        
+            return moveSet
     return False
     
 
