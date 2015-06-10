@@ -14,5 +14,6 @@ The computer player first decides on which square to take based on whether the o
 -----------------------------------------------------
 #todo
 make the script more complex
+
 1.complete a moveset at anypoint during
   
